@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.game-area {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    cursor: pointer;
+}
+
+.score-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 136, 204, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #0088cc;
+    border-radius: 50%;
+    position: absolute;
+    animation: fadeOut 1.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
