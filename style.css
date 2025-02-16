@@ -1,38 +1,60 @@
 body {
     margin: 0;
-    overflow: hidden;
     font-family: Arial, sans-serif;
-}
-
-.game-area {
-    width: 100vw;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
-    position: relative;
-    cursor: pointer;
+    user-select: none;
 }
 
-.score-counter {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: rgba(0, 136, 204, 0.9);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 18px;
+.game-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.circle {
-    width: 20px;
-    height: 20px;
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
     background-color: #0088cc;
-    border-radius: 50%;
-    position: absolute;
-    animation: fadeOut 1.5s forwards;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-@keyframes fadeOut {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(2); }
+button:hover {
+    background-color: #006ba1;
+}
+
+.upgrades button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#coinEffects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.coin-effect {
+    position: absolute;
+    font-size: 18px;
+    color: gold;
+    font-weight: bold;
+    animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-50px); opacity: 0; }
 }

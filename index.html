@@ -2,13 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мини-игра Telegram</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tap Swap Mini</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="gameArea" class="game-area">
-        <div id="scoreCounter" class="score-counter">Очки: 0</div>
+    <div class="game-container">
+        <h1>Tap Swap Mini 🤑</h1>
+        <p>💰 Монеты: <span id="coins">0</span></p>
+
+        <button id="tapButton">💥 Заработать</button>
+
+        <div class="upgrades">
+            <button id="upgradeMultiplier">🔥 Множитель (+1 монета за тап) – <span id="multiplierCost">10</span> монет</button>
+            <button id="upgradeAutoTap">⚙️ Авто-добыча (+1 монета/сек) – <span id="autoTapCost">50</span> монет</button>
+        </div>
+
+        <div id="coinEffects"></div>
     </div>
 
     <script src="script.js"></script>
